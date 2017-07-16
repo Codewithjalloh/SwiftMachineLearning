@@ -12,6 +12,7 @@
 		58C7DEC41F1B69F600E4720B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C7DEC21F1B69F600E4720B /* Main.storyboard */; };
 		58C7DEC61F1B69F600E4720B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C7DEC51F1B69F600E4720B /* Assets.xcassets */; };
 		58C7DEC91F1B69F600E4720B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C7DEC71F1B69F600E4720B /* LaunchScreen.storyboard */; };
+		58C7DED11F1B6A1A00E4720B /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 58C7DED01F1B6A1A00E4720B /* GoogLeNetPlaces.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		58C7DEC51F1B69F600E4720B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58C7DEC81F1B69F600E4720B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58C7DECA1F1B69F600E4720B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58C7DED01F1B6A1A00E4720B /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../../Downloads/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				58C7DEBE1F1B69F600E4720B /* AppDelegate.swift */,
 				58C7DEC01F1B69F600E4720B /* ViewController.swift */,
+				58C7DED01F1B6A1A00E4720B /* GoogLeNetPlaces.mlmodel */,
 				58C7DEC21F1B69F600E4720B /* Main.storyboard */,
 				58C7DEC51F1B69F600E4720B /* Assets.xcassets */,
 				58C7DEC71F1B69F600E4720B /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				58C7DEC11F1B69F600E4720B /* ViewController.swift in Sources */,
 				58C7DEBF1F1B69F600E4720B /* AppDelegate.swift in Sources */,
+				58C7DED11F1B6A1A00E4720B /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
