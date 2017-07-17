@@ -23,6 +23,42 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func detectImageContent() {
         resultLabel.text = "analyzing"
         
+        
+        guard let model = try? VNCoreMLModel(for:GoogLeNetPlaces().model) else {
+            fatalError("Failed to load model")
+        }
+        
+        
+        // create a vision request
+        let request = VNCoreMLRequest(model: model) {[weak self ] request, error in
+            
+            guard let results = request.results as? [VNClassificationObservation], let topResult = results.first else {
+                
+                fatalError("Unexpected results")
+            }
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.resultLabel.text = "\(topResult.identifier) with \(Int(topResult.confidence * 100))% confidence"
+            }
+            
+        }
+        
+        guard let ciImage = CIImage(image: self.photoView.image!) else {
+            fatalError("cannot create CIImage from UIImage")
+        }
+        
+        
+        let handler = VNImageRequestHandler(ciImage: ciImage)
+        DispatchQueue.global().async {
+            do {
+                try handler.perform([request])
+            } catch {
+                print(error)
+            }
+        }
+        
+        
+        
     }
     
     
