@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     func detectImageContent() {
+        resultLabel.text = "analyzing"
         
     }
     
@@ -54,7 +55,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
-    
+    // use the imagePickerController didFinishPickingMediaWithInfo delegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let pickedImg = info[UIImagePickerControllerOriginalImage] as? UIImage {
